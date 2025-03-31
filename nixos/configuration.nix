@@ -43,6 +43,7 @@
     LC_TIME = "de_AT.UTF-8";
   };
 
+  nix.settings.auto-optimise-store = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
 
 
