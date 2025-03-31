@@ -16,6 +16,19 @@
 
   boot.initrd.luks.devices."luks-b58620ea-88a4-4c99-b876-d82adb279144".device = "/dev/disk/by-uuid/b58620ea-88a4-4c99-b876-d82adb279144";
   networking.hostName = "nixos"; # Define your hostname.
+
+  # systemd.resolved setup
+  networking.nameservers = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
+  services.resolved = {
+    enable = true;
+    dnssec = "true";
+    domains = [ "~." ];
+    fallbackDns = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
+    dnsovertls = "true";
+  };
+  # setup mullvad vpn
+  services.mullvad-vpn.enable = true;
+  
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -99,6 +112,11 @@
     #  thunderbird
     ];
   };
+
+
+  # set kernel Param (disable PSR bc of framework 13 stuttering in GNOME)
+  boot.kernelParams = [ "amdgpu.dcdebugmask=0x10" ];
+    
 
 
 /*
