@@ -22,6 +22,7 @@
     gh
     tldr
     nerd-fonts.hasklug
+    nerd-fonts.fira-mono
     nerd-fonts.fira-code
     oh-my-posh
     fastfetch
