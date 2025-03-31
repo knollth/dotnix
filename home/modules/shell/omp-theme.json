@@ -48,7 +48,7 @@
         {
           "foreground": "#73d0ff",
           "style": "plain",
-          "template": "󱄅 ",
+          "template": "  ",
           "type": "text"
         }
       ],
