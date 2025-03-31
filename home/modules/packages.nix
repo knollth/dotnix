@@ -24,6 +24,7 @@
     nerd-fonts.hasklug
     nerd-fonts.fira-code
     oh-my-posh
+    fastfetch
     
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
