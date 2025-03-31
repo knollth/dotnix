@@ -3,6 +3,7 @@
 {
   imports = 
     [
+      ./modules/fastfetch.nix
       ./modules/shell/shell.nix
       ./modules/packages.nix
       ./modules/git.nix
