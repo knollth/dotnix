@@ -6,6 +6,7 @@
       ./modules/shell/shell.nix
       ./modules/packages.nix
       ./modules/git.nix
+      ./modules/ghostty.nix
     ];
   home.username = "tom";
   home.homeDirectory = "/home/tom";
