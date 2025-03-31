@@ -21,6 +21,8 @@
     yazi
     gh
     tldr
+    nerd-fonts.hasklug
+    nerd-fonts.fira-code
     
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
