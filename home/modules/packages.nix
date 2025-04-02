@@ -26,6 +26,7 @@
     nerd-fonts.fira-code
     oh-my-posh
     fastfetch
+    vimPlugins.nightfox-nvim
     
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
