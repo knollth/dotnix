@@ -31,6 +31,7 @@
           enableTreesitter = true;
 
           nix.enable = true;
+          ocaml.enable = true;
         };
       };
     };
