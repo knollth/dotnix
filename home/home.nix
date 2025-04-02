@@ -8,6 +8,7 @@
       ./modules/packages.nix
       ./modules/git.nix
       ./modules/ghostty.nix
+      ./modules/nvf.nix
     ];
   home.username = "tom";
   home.homeDirectory = "/home/tom";
@@ -21,7 +22,6 @@
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
   nixpkgs.config.allowUnfree = true;
-
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
