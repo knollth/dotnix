@@ -46,16 +46,6 @@
           format = "Terafox";
         }
         "TerminalFont"
-        {
-          type = "datetime";
-          key = "Date";
-          format = "{1}-{3}-{11}";
-        }
-        {
-          type = "datetime";
-          key = "Time";
-          format = "{14}:{17}:{20}";
-        }
         "uptime"
         "separator"
         "colors"

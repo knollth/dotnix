@@ -18,13 +18,20 @@
   networking.hostName = "nixos"; # Define your hostname.
 
   # systemd.resolved setup
-  networking.nameservers = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
+  #networking.nameservers = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
   services.resolved = {
     enable = true;
-    dnssec = "true";
+    dnssec = "allow-downgrade";
     domains = [ "~." ];
-    fallbackDns = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
-    dnsovertls = "true";
+    fallbackDns = [
+      "1.1.1.1#one.one.one.one"
+      "1.0.0.1#one.one.one.one"
+      # Optional: Add IPv6 fallbacks if needed
+      "2606:4700:4700::1111#one.one.one.one"
+      "2606:4700:4700::1001#one.one.one.one"
+    ];
+
+    dnsovertls = "opportunistic";
   };
   # setup mullvad vpn
   services.mullvad-vpn.enable = true;
