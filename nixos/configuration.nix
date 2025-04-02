@@ -72,8 +72,6 @@
   nix.settings.auto-optimise-store = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
 
-
-
   services.flatpak.enable = true;
 
   # Enable the X11 windowing system.
@@ -159,16 +157,10 @@
     #nss
     wget
     cmake
-    neovim
     unzip
     home-manager
     wl-clipboard
   ];
-
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
 
   programs.steam = {
     enable = true;
