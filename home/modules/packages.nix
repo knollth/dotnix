@@ -6,24 +6,14 @@
     # pkgs.hello
     discord
     telegram-desktop
-    ghostty
     gnome-tweaks
-    clang
     tree-sitter
-    go
-    ocaml
-    opam
-    nixd
-    rustc
-    cargo
     jetbrains.idea-ultimate
     yazi
     tldr
     nerd-fonts.hasklug
     nerd-fonts.fira-mono
     nerd-fonts.fira-code
-    oh-my-posh
-    fastfetch
     pfetch
     vimPlugins.nightfox-nvim
     

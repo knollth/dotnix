@@ -7,11 +7,27 @@
     settings = {
 
       vim = {
-        lazy.plugins = {
-          "nightfox.nvim" = {
-            package = pkgs.vimPlugins.nightfox-nvim;
-            setupModule = "nightfox";
-            after = ''vim.cmd("colorscheme terafox")'';
+        
+        statusline.lualine.enable = true;
+        telescope.enable = true;
+        autopairs.nvim-autopairs.enable = true;
+
+        useSystemClipboard = true;
+
+        languages = {
+          enableLSP = true;
+          enableTreesitter = true;
+
+          nix.enable = true;
+          ocaml.enable = true;
+        };
+
+        autocomplete.nvim-cmp = {
+          enable = true;
+          mappings = {
+            confirm = "<C-y>";
+            next = "<C-n>";
+            previous = "<C-p>";
           };
         };
 
@@ -21,19 +37,12 @@
           expandtab = true;
         };
 
-        useSystemClipboard = true;
-
-        statusline.lualine.enable = true;
-        telescope.enable = true;
-        autocomplete.nvim-cmp.enable = true;
-        autopairs.nvim-autopairs.enable = true;
-
-        languages = {
-          enableLSP = true;
-          enableTreesitter = true;
-
-          nix.enable = true;
-          ocaml.enable = true;
+        lazy.plugins = {
+          "nightfox.nvim" = {
+            package = pkgs.vimPlugins.nightfox-nvim;
+            setupModule = "nightfox";
+            after = ''vim.cmd("colorscheme terafox")'';
+          };
         };
       };
     };
