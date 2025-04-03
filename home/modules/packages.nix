@@ -10,7 +10,6 @@
     gnome-tweaks
     clang
     tree-sitter
-    nodejs_23
     go
     ocaml
     opam
@@ -19,13 +18,13 @@
     cargo
     jetbrains.idea-ultimate
     yazi
-    gh
     tldr
     nerd-fonts.hasklug
     nerd-fonts.fira-mono
     nerd-fonts.fira-code
     oh-my-posh
     fastfetch
+    pfetch
     vimPlugins.nightfox-nvim
     
 

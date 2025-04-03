@@ -13,4 +13,7 @@
       builtins.readFile ./omp-theme.json
     );
   };
+
+  programs.fzf.enable = true;
+  programs.fzf.enableZshIntegration = true;
 }
