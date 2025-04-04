@@ -16,6 +16,7 @@
     nerd-fonts.fira-code
     pfetch
     vimPlugins.nightfox-nvim
+    zoom-us
     
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
