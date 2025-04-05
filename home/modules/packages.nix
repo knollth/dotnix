@@ -17,6 +17,7 @@
     pfetch
     vimPlugins.nightfox-nvim
     zoom-us
+    onlyoffice-bin
     
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
