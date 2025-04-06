@@ -7,12 +7,13 @@
     settings = {
 
       vim = {
-        
         statusline.lualine.enable = true;
         telescope.enable = true;
         autopairs.nvim-autopairs.enable = true;
 
         useSystemClipboard = true;
+
+        utility.preview.markdownPreview.enable = true;
 
         languages = {
           enableLSP = true;
@@ -20,6 +21,11 @@
 
           nix.enable = true;
           ocaml.enable = true;
+          markdown.enable = true;
+          typst = {
+            enable = true;
+            lsp.enable = true;
+          };
         };
 
         autocomplete.nvim-cmp = {
