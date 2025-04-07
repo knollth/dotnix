@@ -127,7 +127,16 @@
 
 
   # set kernel Param (disable PSR bc of framework 13 stuttering in GNOME)
-  boot.kernelParams = [ "amdgpu.dcdebugmask=0x10" ];
+  #boot.kernelParams = [ "amdgpu.dcdebugmask=0x10" ];
+
+  # set kernel Param (disable PR only bc of framework 13 stuttering in GNOME)
+  boot.kernelParams = [ "amdgpu.dcdebugmask=0x400" ];
+# set kernel Param (disable PR and PSR-SU bc of framework 13 stuttering in GNOME)
+  #boot.kernelParams = [ "amdgpu.dcdebugmask=0x600" ];
+
+
+
+  boot.kernelPackages = pkgs.linuxPackages_latest;
     
 
 
