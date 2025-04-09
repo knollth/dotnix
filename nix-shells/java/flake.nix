@@ -57,6 +57,7 @@
             export MAVEN_OPTS="-Dmaven.compiler.fork=true -Dmaven.compiler.executable=$JAVA_HOME/bin/javac"
             echo "Note: IntelliJ IDEA is expected to be installed on your host system."
             echo "It should automatically detect the JDKs available via Nix."
+            idea-ultimate . > /dev/null 2>&1 &
           '';
         };
       }
