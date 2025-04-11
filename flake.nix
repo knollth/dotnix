@@ -12,9 +12,14 @@
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    musnix  = {
+      url = "github:musnix/musnix"; 
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
-  outputs = { self, nixpkgs, home-manager, nvf,... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nvf, musnix,... }@inputs:
     let
       system = "x86_64-linux"; # Or choose your actual system arch
       pkgs = nixpkgs.legacyPackages.${system};
@@ -25,6 +30,7 @@
           inherit inputs;
         };
         modules = [
+          inputs.musnix.nixosModules.musnix
           ./nixos/configuration.nix
 
           # === IMPORTANT ===
