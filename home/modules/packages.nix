@@ -9,6 +9,9 @@
     gnome-tweaks
     tree-sitter
     jetbrains.idea-ultimate
+    jetbrains.clion
+    mathematica
+    qtcreator
     yazi
     tldr
     nerd-fonts.hasklug
