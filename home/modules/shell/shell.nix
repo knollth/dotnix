@@ -9,6 +9,12 @@
     };
   };
 
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+  };
+
   home.sessionVariables = {
     EDITOR="nvim";
     UNI="$HOME/Documents/Studium";
