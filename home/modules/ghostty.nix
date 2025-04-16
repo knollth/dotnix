@@ -5,7 +5,7 @@
     settings = {
       theme = "terafox";
       window-theme = "ghostty";
-      font-family = "Fira Code Nerd Font";
+      font-family = "Hasklug Nerd Font";
       keybind = [
         "alt+enter=new_split:auto"
         "alt+q=close_surface"

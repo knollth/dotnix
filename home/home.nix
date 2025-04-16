@@ -9,6 +9,7 @@
       ./modules/git.nix
       ./modules/ghostty.nix
       ./modules/nvf.nix
+      ./modules/hyprland.nix
     ];
   home.username = "tom";
   home.homeDirectory = "/home/tom";
@@ -22,13 +23,9 @@
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
   nixpkgs.config.allowUnfree = true;
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
+
   home.file = {
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
+    #".config/waybar".source = ./dotnix/home/modules/waybar;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''

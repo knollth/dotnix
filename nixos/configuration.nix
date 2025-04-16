@@ -83,6 +83,8 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
+  programs.hyprland.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -171,6 +173,12 @@
     unzip
     home-manager
     wl-clipboard
+    kitty
+  ];
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.fira-code
+    nerd-fonts.hasklug
   ];
 
   programs.steam = {

@@ -1,33 +1,42 @@
 {config,pkgs,lib,...}:
 {
   home.packages = with pkgs; [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    # pkgs.hello
-    discord
-    telegram-desktop
-    gnome-tweaks
-    tree-sitter
-    jetbrains.idea-ultimate
-    jetbrains.clion
-    mathematica
-    qtcreator
-    yazi
-    tldr
-    nerd-fonts.hasklug
-    nerd-fonts.fira-mono
-    nerd-fonts.fira-code
-    pfetch
+    # dev
     vimPlugins.nightfox-nvim
-    zoom-us
-    onlyoffice-bin
-    rclone
+    tree-sitter
     vscode
     typst
-    powertop
+    qtcreator
+    jetbrains.clion
+    jetbrains.idea-ultimate
+
+    # Uni
+    mathematica
+    rclone
+    onlyoffice-bin
+
+    # communication
+    discord
+    zoom-us
+    telegram-desktop
+
+    # Audio
     reaper
     reaper-sws-extension
     reaper-reapack-extension
+
+    # wayland stuff
+    wofi
+    waybar
+    swaybg
+
+    # misc
+    powertop
+    pfetch
+    gnome-tweaks
+    yazi
+    tldr
+   
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
