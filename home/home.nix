@@ -16,9 +16,10 @@
 
   home.pointerCursor = {
     enable = true;
+    name = "Vanilla-DMZ";
+    size = 32;
     gtk.enable = true;
     x11.enable = true;
-    name = "Vanilla-DMZ";
     package = pkgs.vanilla-dmz;
     hyprcursor = {
       enable = true;
