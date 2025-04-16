@@ -43,6 +43,15 @@
 
       # ---- input and binds ---
 
+      gestures = {
+        workspace_swipe = true;
+        workspace_swipe_fingers = 3;
+        workspace_swipe_distance = 250;
+        #workspace_swipe_direction_lock_threshold = 4;  
+        #workspace_swipe_cancel_ratio = 0.3;    
+      };
+
+
       input = {
         kb_layout = "us";
         kb_options = "caps:swapescape";
