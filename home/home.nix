@@ -14,6 +14,18 @@
   home.username = "tom";
   home.homeDirectory = "/home/tom";
 
+  home.pointerCursor = {
+    enable = true;
+    gtk.enable = true;
+    x11.enable = true;
+    name = "Vanilla-DMZ";
+    package = pkgs.vanilla-dmz;
+    hyprcursor = {
+      enable = true;
+      size = 32;
+    };
+  };
+
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.

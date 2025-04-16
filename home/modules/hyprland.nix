@@ -16,7 +16,7 @@
       ];
 
       env = [
-        "XCURSOR_SIZE,32"
+        #"XCURSOR_SIZE,24"
         "GDK_SCALE,2"
       ];
 
@@ -36,7 +36,7 @@
 
       monitor=[",highres,auto,2"];
 
-      #xwayland.force_zero_scaling = true;
+      xwayland.force_zero_scaling = true;
 
       # ---- input and binds ---
 

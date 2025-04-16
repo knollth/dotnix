@@ -30,6 +30,9 @@
     waybar
     swaybg
 
+    # cursor-themes
+    vanilla-dmz
+
     # misc
     powertop
     pfetch

@@ -18,6 +18,7 @@
   home.sessionVariables = {
     EDITOR="nvim";
     UNI="$HOME/Documents/Studium";
+    NIXOS_OZONE_WL = "1";
   };
 
   programs.oh-my-posh = {
