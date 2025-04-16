@@ -10,6 +10,7 @@
       ./modules/ghostty.nix
       ./modules/nvf.nix
       ./modules/hyprland.nix
+      ./modules/wlsunset.nix
     ];
   home.username = "tom";
   home.homeDirectory = "/home/tom";
