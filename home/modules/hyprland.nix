@@ -16,8 +16,8 @@
       ];
 
       env = [
-        "XCURSOR_SIZE,24"
-        #"GDK_SCALE,2"
+        "GDK_SCALE,2"
+        "_JAVA_OPTIONS,-Dawt.toolkit.name=WLToolkit"
       ];
 
       # look and feel

@@ -19,6 +19,7 @@
     EDITOR="nvim";
     UNI="$HOME/Documents/Studium";
     NIXOS_OZONE_WL = "1";
+    _JAVA_OPTIONS = "-Dawt.toolkit.name=WLToolkit";
   };
 
   programs.oh-my-posh = {

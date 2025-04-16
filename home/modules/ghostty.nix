@@ -2,6 +2,8 @@
 {
   programs.ghostty = {
     enable = true;
+    enableZshIntegration = true;
+    enableBashIntegration = true;
     settings = {
       theme = "terafox";
       window-theme = "ghostty";
