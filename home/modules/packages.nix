@@ -22,6 +22,7 @@
     zoom-us
     onlyoffice-bin
     rclone
+    vscode
     typst
     powertop
     reaper

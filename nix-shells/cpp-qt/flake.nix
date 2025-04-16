@@ -26,16 +26,17 @@
 
           # Runtime dependencies
           buildInputs = with pkgs; [
-            qt6.full
-            qt6.qtwayland
+            alsa-lib
+            qt5.full
+            qt5.qtwayland
             zlib
             gcc
             git
           ];
 
           # Environment variables
-          QT_PLUGIN_PATH = "${pkgs.qt6.qtbase}/${pkgs.qt6.qtbase.qtPluginPrefix}";
-          QML2_IMPORT_PATH = "${pkgs.qt6.qtdeclarative}/${pkgs.qt6.qtdeclarative.qtQmlPrefix}";
+          #QT_PLUGIN_PATH = "${pkgs.qt5.qtbase}/${pkgs.qt5.qtbase.qtPluginPrefix}";
+          #QML2_IMPORT_PATH = "${pkgs.qt5.qtdeclarative}/${pkgs.qt5.qtdeclarative.qtQmlPrefix}";
 
           shellHook = ''
             echo "Qt6 Development Environment Ready!"
