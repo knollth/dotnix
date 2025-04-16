@@ -8,7 +8,8 @@
       "$mod" = "SUPER";
       "$menu" = "wofi --show drun";
       "$term" = "ghostty";
-      "$wallpaper" = "~/Pictures/backgrounds/green/stare.jpg";
+      #"$wallpaper" = "~/Pictures/backgrounds/green/stare.jpg";
+      "$wallpaper" = "~/Pictures/backgrounds/nautical/wave.png";
 
       exec-once = [
         "waybar"
@@ -17,10 +18,10 @@
 
       env = [
         "GDK_SCALE,2"
-        "_JAVA_OPTIONS,-Dawt.toolkit.name=WLToolkit"
+        "_JAVA_OPTIONS,-Dawt.toolkit.name=WLToolkit" # wayland for jetbrains
       ];
 
-      # look and feel
+      # display
       general = {
         gaps_in = 0;
         gaps_out = 0;
@@ -32,11 +33,13 @@
         shadow.enabled = false;
       };
       animations.enabled = false;
-
-
       monitor=[",highres,auto,2"];
-
       xwayland.force_zero_scaling = true;
+
+      misc = {
+        vrr = 2;
+        vfr = true;
+      };
 
       # ---- input and binds ---
 
@@ -58,6 +61,8 @@
         "$mod, J, movefocus, d"
         "$mod, K, movefocus, u"
         "$mod, l, movefocus, r"
+        "$mod, V, togglefloating"
+        "$mod, SPACE, fullscreen"
       ]
       ++ (
         # workspaces
@@ -71,6 +76,10 @@
           )
           9)
       );
+      bindm = [
+        "$mod, mouse:272, movewindow"
+        "$mod SHIFT, mouse:272, resizewindow"
+      ];
     };
   };
 }
