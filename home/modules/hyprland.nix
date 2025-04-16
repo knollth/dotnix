@@ -16,8 +16,8 @@
       ];
 
       env = [
-        #"XCURSOR_SIZE,24"
-        "GDK_SCALE,2"
+        "XCURSOR_SIZE,24"
+        #"GDK_SCALE,2"
       ];
 
       # look and feel
