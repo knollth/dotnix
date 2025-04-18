@@ -21,12 +21,7 @@
           pkgs.temurin-bin-21 # JDK 21 (LTS)
           pkgs.temurin-bin-17 # JDK 17 (LTS)
         ];
-
-        # Assuming eclipse-java is the correct attribute.
-        # If not found during evaluation, check `nix search nixpkgs eclipse-java`
-        # or search.nixos.org/packages - it might be just `pkgs.eclipse-java`.
         eclipsePackage = pkgs.eclipses.eclipse-java;
-
       in
       {
         devShells.default = pkgs.mkShell {

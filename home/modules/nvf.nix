@@ -11,16 +11,29 @@
         useSystemClipboard = true;
         utility.preview.markdownPreview.enable = true;
 
+        diagnostics = {
+          enable = true;
+          config = {
+            #virtual_lines = true;
+            virtual_signs = true;
+            virtual_text = true;
+          };
+        };
+
         languages = {
           enableLSP = true;
           enableTreesitter = true;
+          enableExtraDiagnostics = true;
 
           nix.enable = true;
-          ocaml.enable = true;
           markdown.enable = true;
           typst = {
             enable = true;
             lsp.enable = true;
+          };
+          ocaml = {
+            enable = true;
+            format.enable = true;
           };
         };
 
