@@ -1,26 +1,13 @@
-# This is mostly AI generated, use at own risk
-
-
-# shell.nix
-# Development environment for OCaml assignment using Neovim + LSP
-
 { pkgs ? import <nixpkgs> {} }:
-
 let
-  # Use the consistent OCaml package set from Nixpkgs
-  # Ensures compiler, LSP, dune, etc., are built against the same OCaml version
-  ocamlPkgs = pkgs.ocamlPackages;
-
+ ocamlPkgs = pkgs.ocamlPackages;
 in
 pkgs.mkShell {
-  # Packages needed for building and running OCaml code
   buildInputs = [
-    # --- Core OCaml Toolchain ---
     ocamlPkgs.ocaml          # The OCaml compiler (ocamlc, ocamlopt) & standard library
     ocamlPkgs.dune_3         # The standard build system
     ocamlPkgs.findlib        # Library manager (provides ocamlfind)
 
-    # --- Development Experience Tools ---
     ocamlPkgs.ocaml-lsp      # Language Server for editor integration (Neovim)
     ocamlPkgs.ocamlformat    # Automatic code formatter
     ocamlPkgs.utop           # Enhanced interactive top-level (REPL)
