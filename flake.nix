@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -16,7 +15,6 @@
       url = "github:musnix/musnix"; 
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
   };
 
   outputs = { self, nixpkgs, home-manager, nvf, musnix,... }@inputs:
@@ -26,13 +24,14 @@
     in {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
+
         specialArgs = {
           inherit inputs;
         };
+
         modules = [
           inputs.musnix.nixosModules.musnix
           ./nixos/configuration.nix
-
           # === IMPORTANT ===
           # Ensure your system/configuration.nix does NOT import
           # inputs.home-manager.nixosModules.default or try to manage
@@ -43,9 +42,11 @@
 
       homeConfigurations.tom = home-manager.lib.homeManagerConfiguration {
         inherit pkgs; # Use the pkgs defined above
+
         extraSpecialArgs = {
            inherit inputs;
          };
+
         modules = [
           nvf.homeManagerModules.default
           ./home/home.nix
