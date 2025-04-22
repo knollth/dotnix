@@ -26,7 +26,6 @@
     reaper-reapack-extension
 
     # wayland stuff
-    wofi
     waybar
     swaybg
 

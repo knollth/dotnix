@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./modules/stylix/stylix.nix
     ];
 
   # Bootloader.
@@ -16,6 +17,8 @@
 
   boot.initrd.luks.devices."luks-b58620ea-88a4-4c99-b876-d82adb279144".device = "/dev/disk/by-uuid/b58620ea-88a4-4c99-b876-d82adb279144";
   networking.hostName = "nixos"; # Define your hostname.
+
+  services.blueman.enable = true;
 
   # systemd.resolved setup
   #networking.nameservers = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];

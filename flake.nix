@@ -15,6 +15,7 @@
       url = "github:musnix/musnix"; 
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix.url = "github:danth/stylix";
   };
 
   outputs = { self, nixpkgs, home-manager, nvf, musnix,... }@inputs:
@@ -30,8 +31,9 @@
         };
 
         modules = [
-          inputs.musnix.nixosModules.musnix
           ./nixos/configuration.nix
+          inputs.musnix.nixosModules.musnix
+          inputs.stylix.nixosModules.stylix
           # === IMPORTANT ===
           # Ensure your system/configuration.nix does NOT import
           # inputs.home-manager.nixosModules.default or try to manage

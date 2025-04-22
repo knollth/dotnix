@@ -14,6 +14,8 @@
       exec-once = [
         "waybar"
         "swaybg -i $wallpaper"
+        "blueman-applet"
+        "blueman-tray"
       ];
 
       env = [
