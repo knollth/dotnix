@@ -11,7 +11,7 @@
     jetbrains.idea-ultimate
 
     # Uni
-    mathematica
+    #mathematica
     rclone
     onlyoffice-bin
 
