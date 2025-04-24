@@ -35,11 +35,11 @@
         shadow.enabled = false;
       };
       animations.enabled = false;
-      monitor=[",highres,auto,2"];
+      monitor=["eDP-1,highres,auto,2"];
       xwayland.force_zero_scaling = true;
 
       misc = {
-        vrr = 2;
+        vrr = 1;
         vfr = true;
       };
 
