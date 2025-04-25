@@ -14,6 +14,7 @@
     #mathematica
     rclone
     onlyoffice-bin
+    zed-editor
 
     # communication
     discord

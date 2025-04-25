@@ -33,7 +33,7 @@
           };
           ocaml = {
             enable = true;
-            format.enable = true;
+            format.enable = false;
           };
         };
 
