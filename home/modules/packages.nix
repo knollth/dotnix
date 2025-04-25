@@ -39,6 +39,8 @@
     gnome-tweaks
     yazi
     tldr
+    networkmanagerapplet
+    
    
 
     # # It is sometimes useful to fine-tune packages, for example, by applying

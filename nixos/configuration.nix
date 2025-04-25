@@ -16,9 +16,22 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.initrd.luks.devices."luks-b58620ea-88a4-4c99-b876-d82adb279144".device = "/dev/disk/by-uuid/b58620ea-88a4-4c99-b876-d82adb279144";
-  networking.hostName = "nixos"; # Define your hostname.
+
 
   services.blueman.enable = true;
+
+
+  # ------ Framework config -------
+  services.fwupd.enable = true;
+  services.power-profiles-daemon.enable = true;
+
+  # ------ Networking -------
+
+  # Set hostname
+  networking.hostName = "nixos"; # Define your hostname.
+
+  # Enable networking
+  networking.networkmanager.enable = true;
 
   # systemd.resolved setup
   #networking.nameservers = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
@@ -36,25 +49,14 @@
 
     dnsovertls = "opportunistic";
   };
-  # setup mullvad vpn
+
   services.mullvad-vpn.enable = true;
 
-  # ------ Framework config -------
-  services.fwupd.enable = true;
-
-  services.power-profiles-daemon.enable = true;
-
-
-
-
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
+  # Enable wireless support via wpa_supplicant.
+  #networking.wireless.enable = true;  
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Vienna";
@@ -141,11 +143,7 @@
 # set kernel Param (disable PR and PSR-SU bc of framework 13 stuttering in GNOME)
   #boot.kernelParams = [ "amdgpu.dcdebugmask=0x600" ];
 
-
-
   boot.kernelPackages = pkgs.linuxPackages_latest;
-    
-
 
 /*
   home-manager = {
