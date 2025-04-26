@@ -16,6 +16,7 @@
         "swaybg -i $wallpaper"
         "blueman-applet"
         "blueman-tray"
+        "nm-applet"
       ];
 
       env = [
