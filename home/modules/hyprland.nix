@@ -65,6 +65,7 @@
       
       bind = [
         "$mod, RETURN, exec, ghostty"
+        "SUPER_SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy"
         "$mod , P, exec, $menu"
         "$mod, M, exit"
         "$mod SHIFT, Q, killactive"

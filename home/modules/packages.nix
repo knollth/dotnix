@@ -15,6 +15,7 @@
     rclone
     onlyoffice-bin
     zed-editor
+    anki-bin
 
     # communication
     discord
@@ -29,6 +30,8 @@
     # wayland stuff
     waybar
     swaybg
+    grim
+    slurp
 
     # cursor-themes
     vanilla-dmz
