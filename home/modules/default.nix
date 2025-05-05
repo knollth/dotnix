@@ -12,5 +12,7 @@
     ./wlsunset.nix
     ./wofi.nix
     ./xdg
+    ./zathura.nix
+    ./gtk.nix
   ];
 }

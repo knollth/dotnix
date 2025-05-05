@@ -16,7 +16,7 @@
     //"bluetooth",
     //"network",
     "pulseaudio",
-    "sway/language",
+    "hyprland/language",
     "cpu",
     "memory",
     "battery",
