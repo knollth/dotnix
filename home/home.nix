@@ -3,17 +3,22 @@
 {
   imports = 
     [
-      ./modules/fastfetch.nix
-      ./modules/shell/shell.nix
-      ./modules/packages.nix
-      ./modules/git.nix
-      ./modules/ghostty.nix
-      ./modules/nvf.nix
-      ./modules/hyprland.nix
-      ./modules/wlsunset.nix
+      ./modules
     ];
+
   home.username = "tom";
+
   home.homeDirectory = "/home/tom";
+
+  home.sessionVariables = {
+    EDITOR="nvim";
+    UNI="$HOME/Documents/Studium";
+    NIXOS_OZONE_WL = "1";
+    GTK_USE_PORTAL=1;
+    ELECTRON_USE_XDG_PORTAL=1;
+    _JAVA_OPTIONS = "-Dawt.toolkit.name=WLToolkit";
+  };
+
 
   home.pointerCursor = {
     enable = true;

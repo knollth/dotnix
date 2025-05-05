@@ -19,9 +19,15 @@
         "nm-applet"
       ];
 
+      # have to set toolkit/scaling envvars here
+      # home.sessionVariables doesn't set these for hyprland
+      # maybe switch to uswm in future
       env = [
         "GDK_SCALE,2"
-        "_JAVA_OPTIONS,-Dawt.toolkit.name=WLToolkit" # wayland for jetbrains
+        "_JAVA_OPTIONS, -Dawt.toolkit.name=WLToolkit"
+        "NIXOS_OZONE_WL, 1"
+        "ELECTRON_USE_XDG_PORTAL,1"
+        "GTK_USE_PORTAL=1;"
       ];
 
       # display

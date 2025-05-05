@@ -1,0 +1,16 @@
+{pkgs,...}:
+{
+  imports = [
+    ./direnv.nix
+    ./fastfetch.nix
+    ./ghostty.nix
+    ./git.nix
+    ./hyprland.nix
+    ./nvf.nix
+    ./packages.nix
+    ./shell/shell.nix
+    ./wlsunset.nix
+    ./wofi.nix
+    ./xdg
+  ];
+}

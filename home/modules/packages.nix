@@ -37,6 +37,7 @@
     vanilla-dmz
 
     # misc
+    nautilus
     powertop
     pfetch
     gnome-tweaks
