@@ -20,6 +20,12 @@
     _JAVA_OPTIONS = "-Dawt.toolkit.name=WLToolkit";
   };
 
+  home.shellAliases = {
+      uni-push = "rclone sync -v $HOME/Documents/Studium drive:/Studium";
+      uni-pull = "rclone sync -v drive:/Studium $HOME/Documents/Studium";
+      idead = "idea-ultimate . > /dev/null 2>&1 & disown";
+      zath= "zathura --fork";
+  };
 
   home.pointerCursor = {
     enable = true;
@@ -33,8 +39,6 @@
       size = 32;
     };
   };
-
-  programs.wofi.enable = true;
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release

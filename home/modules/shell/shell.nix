@@ -4,10 +4,6 @@
 
   programs.zsh = {
     enable = true;
-    shellAliases = {
-      uni-push = "rclone sync -v $HOME/Documents/Studium drive:/Studium";
-      uni-pull = "rclone sync -v drive:/Studium $HOME/Documents/Studium";
-    };
   };
 
   programs.oh-my-posh = {
