@@ -62,7 +62,7 @@
 
 
       input = {
-        kb_layout = "us";
+        kb_layout = "us,de";
         kb_options = "caps:swapescape";
         touchpad = {
           natural_scroll = true;
@@ -72,6 +72,7 @@
       bind = [
         "$mod, RETURN, exec, ghostty"
         "SUPER_SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy"
+        "SUPER_SHIFT, SPACE, exec, hyprctl switchxkblayout at-translated-set-2-keyboard next"
         "$mod , P, exec, $menu"
         "$mod, M, exit"
         "$mod SHIFT, Q, killactive"
