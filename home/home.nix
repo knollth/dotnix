@@ -13,8 +13,9 @@
   home.sessionVariables = {
     EDITOR="nvim";
     UNI="$HOME/Documents/Studium";
-    NIXOS_OZONE_WL = "1";
+    GDK_SCALE=2;
     GTK_USE_PORTAL=1;
+    NIXOS_OZONE_WL = "1";
     ELECTRON_USE_XDG_PORTAL=1;
     _JAVA_OPTIONS = "-Dawt.toolkit.name=WLToolkit";
   };
