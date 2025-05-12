@@ -14,5 +14,6 @@
     ./xdg
     ./zathura.nix
     ./gtk.nix
+    ./mathematica.nix
   ];
 }
