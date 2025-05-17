@@ -22,11 +22,6 @@
     zoom-us
     telegram-desktop
 
-    # Audio
-    reaper
-    reaper-sws-extension
-    reaper-reapack-extension
-
     # wayland stuff
     waybar
     swaybg

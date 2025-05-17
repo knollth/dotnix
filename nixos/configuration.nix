@@ -17,6 +17,12 @@
 
   boot.initrd.luks.devices."luks-b58620ea-88a4-4c99-b876-d82adb279144".device = "/dev/disk/by-uuid/b58620ea-88a4-4c99-b876-d82adb279144";
 
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
+
+
 
   services.blueman.enable = true;
 
@@ -172,6 +178,7 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #nss
+    distrobox
     wget
     cmake
     unzip
