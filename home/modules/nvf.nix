@@ -8,7 +8,6 @@
         telescope.enable = true;
         autopairs.nvim-autopairs.enable = true;
 
-        useSystemClipboard = true;
         utility.preview.markdownPreview.enable = true;
 
         diagnostics = {
@@ -18,6 +17,11 @@
             virtual_signs = true;
             virtual_text = true;
           };
+        };
+
+        clipboard = {
+          enable = true;
+          registers = "unnamedplus";
         };
 
         languages = {
