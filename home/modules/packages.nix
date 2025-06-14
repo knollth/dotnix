@@ -14,7 +14,6 @@
     #mathematica
     rclone
     onlyoffice-bin
-    zed-editor
     anki-bin
 
     # communication
@@ -36,7 +35,6 @@
     powertop
     pfetch
     gnome-tweaks
-    yazi
     tldr
     networkmanagerapplet
     

@@ -1,6 +1,8 @@
 {pkgs,...}:
 {
   imports = [
+    ./zed-editor.nix
+    ./yazi.nix
     ./direnv.nix
     ./fastfetch.nix
     ./ghostty.nix
@@ -16,5 +18,6 @@
     ./gtk.nix
     ./mpv.nix
     ./mathematica.nix
+    ./imv.nix
   ];
 }
