@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./modules/stylix/stylix.nix
+      ./modules/audio-prod.nix
     ];
 
   # Bootloader.
@@ -22,10 +23,13 @@
     dockerCompat = true;
   };
 
-
-
   services.blueman.enable = true;
   hardware.bluetooth.enable = true;
+
+  programs.audio-prod = {
+    enable = true;
+    musnix.enable = true;
+  };
 
 
   # ------ Framework config -------
@@ -94,8 +98,8 @@
   services.xserver.enable = false;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = false;
-  #services.xserver.desktopManager.gnome.enable = true;
+  #services.displayManager.gdm.enable = false;
+  #services.desktopManager.gnome.enable = false;
 
   programs.hyprland.enable = true;
   programs.dconf.enable = true;
@@ -110,7 +114,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -186,6 +190,7 @@
     home-manager
     wl-clipboard
     kitty
+    steamcmd
   ];
 
   fonts.packages = with pkgs; [
@@ -198,6 +203,7 @@
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+    extraCompatPackages = [ pkgs.proton-ge-bin ];
   };
 
   # Some programs need SUID wrappers, can be configured further or are

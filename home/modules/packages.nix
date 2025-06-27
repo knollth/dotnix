@@ -26,6 +26,16 @@
     swaybg
     grim
     slurp
+    
+    # audio-prod
+    reaper
+    surge-XT
+    yabridge
+    yabridgectl
+    vital
+    distrho-ports
+    lsp-plugins
+    wineWowPackages.stagingFull
 
     # cursor-themes
     vanilla-dmz

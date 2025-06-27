@@ -1,7 +1,7 @@
 {config, pkgs,lib,...}:
 {
   programs.zed-editor = {
-    enable = true;
+    enable = false;
     extensions = [
       "nix"
       "nvim-nightfox"
