@@ -12,6 +12,7 @@ in
 
       default = with pkgs; [
         reaper
+        bitwig-studio
         #carla
         calf
         zam-plugins

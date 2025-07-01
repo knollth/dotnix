@@ -18,6 +18,7 @@
     NIXOS_OZONE_WL = "1";
     ELECTRON_USE_XDG_PORTAL=1;
     _JAVA_OPTIONS = "-Dawt.toolkit.name=WLToolkit";
+    JAVA_TOOL_OPTIONS = "-Dsun.java2d.uiScale=2";
   };
 
   home.shellAliases = {
