@@ -98,8 +98,8 @@
   services.xserver.enable = false;
 
   # Enable the GNOME Desktop Environment.
-  #services.displayManager.gdm.enable = false;
-  #services.desktopManager.gnome.enable = false;
+  #services.displayManager.gdm.enable = true;
+  #services.desktopManager.gnome.enable = true;
 
   programs.hyprland.enable = true;
   programs.dconf.enable = true;
@@ -192,6 +192,7 @@
     wl-clipboard
     kitty
     steamcmd
+    winetricks
   ];
 
   fonts.packages = with pkgs; [

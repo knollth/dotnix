@@ -2,6 +2,6 @@
 {
   imports = [
     ./xdg.nix
-    ./xdg-portals.nix
+    #./xdg-portals.nix
   ];
 }

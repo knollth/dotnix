@@ -17,7 +17,7 @@
     ./zathura.nix
     ./gtk.nix
     ./mpv.nix
-    ./mathematica.nix
+    #./mathematica.nix
     ./imv.nix
   ];
 }

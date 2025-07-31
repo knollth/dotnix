@@ -26,7 +26,6 @@ in
         yabridgectl
         yabridge
         winetricks
-
       ];
       description = "List of native Linux audio packages to install.";
     };
@@ -40,20 +39,35 @@ in
       };
     };
 
+    yabridge = lib.mkOption {
+      type = lib.types.package;
+      default = pkgs.yabridge;
+      description = "The package providing yabridge yabridgectl.";
+    };
+
+    yabridgectl = lib.mkOption {
+      type = lib.types.package;
+      default = pkgs.yabridgectl;
+      description = "The package providing yabridge and yabridgectl.";
+    };
+
     wine = lib.mkOption {
       type = lib.types.package;
-      default = pkgs.wineWowPackages.yabridge;
+      default = pkgs.wineWowPackages.stagingFull;
       description = "The Wine package to use for running Windows VSTs via yabridge.";
     };
   };
 
+  # The structure here is now `config = lib.mkIf cfg.enable (let ... in { ... });`
   config = lib.mkIf cfg.enable (
     let
+      # This local variable is defined *before* the attribute set is created.
       audioPackages = cfg.packages;
     in
+    # The `in` is followed by the attribute set as a single value.
     {
-      environment.systemPackages = audioPackages ++ [ cfg.wine ];
+      environment.systemPackages = audioPackages ++ [ cfg.yabridge cfg.wine ];
       musnix.enable = lib.mkIf cfg.musnix.enable true;
     }
-  ); 
+  ); # <-- Closing parenthesis for lib.mkIf
 }

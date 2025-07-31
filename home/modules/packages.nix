@@ -6,7 +6,6 @@
     tree-sitter
     vscode
     typst
-    qtcreator
     jetbrains.clion
     jetbrains.idea-ultimate
 
@@ -37,6 +36,7 @@
     tldr
     networkmanagerapplet
     vulkan-tools
+    winetricks
     
    
 
